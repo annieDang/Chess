@@ -1,4 +1,11 @@
-var PreloadState = {
+'use strict';
+
+function Preload() {
+  this.asset = null;
+  this.ready = false;
+}
+
+Preload.prototype = {
 	//load the game assets before the game starts
   preload: function() {
 
@@ -28,8 +35,9 @@ var PreloadState = {
     this.load.image('black king', 'assets/images/black_king.png')
 
     this.load.image('nextStep', 'assets/images/nextStep.png')
+    this.load.text('positions', 'assets/settings/orginal/positions.json');
   },
   create: function() {
-    this.state.start('HomeState');
+    this.state.start('home');
   }
 };

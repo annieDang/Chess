@@ -1,4 +1,6 @@
-var HomeState = {
+'use strict';
+function MenuState() {}
+MenuState.prototype = {
 
   init: function(message) {
     this.message = message;
@@ -9,7 +11,7 @@ var HomeState = {
     background.inputEnabled = true;
 
     background.events.onInputDown.add(function(){
-      this.state.start('GameState');
+      this.state.start('play');
     }, this);
 
     var style = {font: '35px Arial', fill: '#fff'};

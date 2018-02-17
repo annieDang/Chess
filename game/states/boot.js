@@ -1,4 +1,6 @@
-var BootState = {
+'use strict'
+function Boot() {}
+Boot.prototype = {
 	//initiate some game-level settings
   init: function() {
     //scaling options
@@ -13,6 +15,6 @@ var BootState = {
   create: function() {
   	this.game.stage.backgroundColor = '#fff';
 
-  	this.state.start('PreloadState');
+  	this.state.start('preload');
   }
 };
